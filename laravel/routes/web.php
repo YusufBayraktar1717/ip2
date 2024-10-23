@@ -15,5 +15,6 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/',[\App\Http\Controllers\PageController::class ,'index']);
 Route::get('/about',[\App\Http\Controllers\PageController::class ,'about']);
-Route::get('/contact',[\App\Http\Controllers\PageController::class ,'contact']);
+Route::get('/contact',[\App\Http\Controllers\ContactController::class ,'index']);
 
+Route::post('/contact',[\App\Http\Controllers\ContactController::class ,'store']);
